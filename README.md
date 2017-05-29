@@ -7,9 +7,13 @@ This project consists of two separate applications:
 
 ## Specification
 
-project01: The file app/assets/javascripts/application.js contains a block of code responsible for monitor the user activity on the page. It can be ported to any other website.
+### project01
 
-tracker_view: This project contains a simple index page which shows the user activity received.
+The file app/assets/javascripts/application.js contains a block of code responsible for monitor the user activity on the page. It can be ported to any other website.
+
+### tracker_view
+
+This project contains a simple index page which shows the user activity received.
 
 In order to listen to the user activity from other sites, a rake task was created: tracker:tcp_server_task.
 
