@@ -27,7 +27,7 @@ The installation of the following binaries may be required if they are not prese
 
 ### project01
 
-The file [a link](https://github.com/cezbastos/RD-Project/blob/master/project01/app/assets/javascripts/application.js) contains a block of code responsible for monitor the user activity on the page. It can be ported to any other website.
+The file [application.js](https://github.com/cezbastos/RD-Project/blob/master/project01/app/assets/javascripts/application.js) contains a block of code responsible for monitor the user activity on the page. It can be ported to any other website.
 
 ### tracker_view
 
@@ -35,7 +35,7 @@ This project contains a simple index page which shows the user activity received
 
 In order to listen to the user activity from other sites, a rake task was created: 
 
-[a link](https://github.com/cezbastos/RD-Project/blob/master/tracker_view/lib/tasks/tracker.rake)
+[tracker.rake](https://github.com/cezbastos/RD-Project/blob/master/tracker_view/lib/tasks/tracker.rake)
 
 After starting the rails application, this task must be running to receive incoming data from other sites. Execute the following command to run it:
 
