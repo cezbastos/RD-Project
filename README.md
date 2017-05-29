@@ -33,9 +33,7 @@ The file [application.js](https://github.com/cezbastos/RD-Project/blob/master/pr
 
 This project contains a simple index page which shows the user activity received.
 
-In order to listen to the user activity from other sites, a rake task was created: 
-
-[tracker.rake](https://github.com/cezbastos/RD-Project/blob/master/tracker_view/lib/tasks/tracker.rake)
+In order to listen to the user activity from other sites, a rake task was created: [tracker.rake](https://github.com/cezbastos/RD-Project/blob/master/tracker_view/lib/tasks/tracker.rake)
 
 After starting the rails application, this task must be running to receive incoming data from other sites. Execute the following command to run it:
 
@@ -45,12 +43,12 @@ After starting the rails application, this task must be running to receive incom
 
 1) Start the tracker_view application and the rake task
 
-	user@pc ../../tracker_view $ rails server -d -p 3001
-	user@pc ../../tracker_view $ rake tracker:tcp_server_task
+	$ rails server -d -p 3001
+	$ rake tracker:tcp_server_task
 
 2) Start the project01 application, and access it to generate activities (requests to be received by tcp_server_task)
 
-	user@pc ../../project01 $ rails server -p 3000
+	$ rails server -p 3000
 
 3) Access a few pages under http://localhost:3000, then register yourself as a contact
 
