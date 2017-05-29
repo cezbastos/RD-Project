@@ -29,6 +29,8 @@ The installation of the following binaries may be required if they are not prese
 
 The file [application.js](https://github.com/cezbastos/RD-Project/blob/master/project01/app/assets/javascripts/application.js) contains a block of code responsible for monitor the user activity on the page. It can be ported to any other website.
 
+Note that the default port for the communication between the javascript and the tcp_server is 2000. To change it, the files [application.js](https://github.com/cezbastos/RD-Project/blob/master/project01/app/assets/javascripts/application.js) and [tracker.rake](https://github.com/cezbastos/RD-Project/blob/master/tracker_view/lib/tasks/tracker.rake) must have their ports changed on the code.
+
 ### tracker_view
 
 This project contains a simple index page which shows the user activity received.
@@ -52,4 +54,4 @@ After starting the rails application, this task must be running to receive incom
 
 3) Access a few pages under http://localhost:3000, then register yourself as a contact
 
-4) Access http://localhost:3001 to see your activity recorded - The tcp_server_tasks also display logs in its console
+4) Access http://localhost:3001 to see your activity recorded - The tcp_server_task also display logs in its console
