@@ -6,6 +6,10 @@ namespace :tracker do
 
 	port = 2000 # default port
 
+	def log_info(message)
+		puts "#{Time.now.strftime("[%Y-%m-%d %H:%M:%S]")} #{message}"
+	end
+
 	def parse_data data
 	  unescaped_data = URI.unescape(data)
 	  arr = unescaped_data.split("&")
@@ -25,8 +29,8 @@ namespace :tracker do
 	  array_pages.sort!{ |x, y| y.last <=> x.last }
 	  array_pages.uniq!{ |x| x.first }
 
-	  puts "Email: #{email}"
-	  puts "Pages and timestampts: #{array_pages}"
+	  log_info("Email: #{email}")
+	  log_info("Pages and timestamps: #{array_pages}")
 
 	  Contact.new::insert_or_update(email, array_pages)
 
@@ -43,7 +47,7 @@ namespace :tracker do
 	   end
 	   data = client.read(headers["Content-Length"].to_i)  # Read the POST data as specified in the header
 
-	   puts "Request received"
+	   log_info("Request received")
 	   parse_data data
 
 	   client.close                                        # Disconnect from the client
