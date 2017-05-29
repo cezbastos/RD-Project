@@ -1,0 +1,23 @@
+<h1>User Activity</h1>
+
+<% @contacts = Contact.all.order(:email, :access_datetime, :page) %>
+
+<table border="1">
+
+	<% unless @contacts.nil? %>
+		<th>Email</th>
+		<th>Page</th>
+		<th>Access Time</th>
+	<% end %>
+
+	<% @contacts.each { |contact| %>
+
+		<tr>
+		<td><%= contact.email %></td>
+		<td><%= contact.page %></td>
+		<td><%= contact.access_datetime %></td>
+		</tr>
+
+	<% } %>
+
+</table>
